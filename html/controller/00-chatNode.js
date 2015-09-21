@@ -46,7 +46,7 @@ angular.module('resumen').controller('chatNode',['$scope','$timeout','$interval'
 		];
 		$scope.rangeTime = $scope.timeRange[0].range;
 
-		var socket = io.connect('http://192.168.1.201:64500');
+		var socket = io.connect('http://101.101.101.101:80');
 		socket.on('connect', function (data) {
 			connect = true;
 			$scope.$apply(function () {
@@ -57,7 +57,7 @@ angular.module('resumen').controller('chatNode',['$scope','$timeout','$interval'
 		});
 		// when 'getservers' modify '$scope.serversNames'
 		socket.on('getservers', function (data) {
-			//console.log('connect and getservers: ',data);
+			console.log('connect and getservers: ',data);
 			if(typeof data === 'string'){
 				alert(data);
 			}else{ // is array

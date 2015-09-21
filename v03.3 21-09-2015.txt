@@ -1,3 +1,6 @@
+v-03.3
+. I returned to put into production a single server, and I have changed the order of generating and sending servers name.
+
 v-03
 . It is programmed the entire application to be dynamically generate all graphs
 . now everything is stored in the database MongoDB
