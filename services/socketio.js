@@ -157,10 +157,12 @@ io.sockets.on('connection', function(socket){
     }
 
     socket.on('addRoom', function (data) {
-        socket.join(adminRoom); // join to room
-        console.log(df.dateComplet()+" => New ADMIN in room "+adminRoom+" from "+ip);
         // sent to client the SERVERS name array        
         sendServerNames();
+        console.log(df.dateComplet()+" => New ADMIN in room "+adminRoom+" from "+ip);
+        socket.join(adminRoom); // join to room
+        
+        
     });
 
     socket.on('envioPHP', function(data){

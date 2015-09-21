@@ -1,0 +1,14 @@
+v-03.3
+. I returned to put into production a single server, and I have changed the order of generating and sending servers name.
+
+v-03
+. It is programmed the entire application to be dynamically generate all graphs
+. now everything is stored in the database MongoDB
+
+v-02
+. created page on the client with the path name 'FILTER' where is placed a graphic and a selection filters that time to fill chart with data stored in MongoDB DDBB
+
+v-01
+. add alarm every 5 minutes if the server is not responding, leaving a popup
+
+. Improved how to read the data now stored in an object and graphic read it directly from him

@@ -97,14 +97,14 @@ angular.module('resumen').controller('filtrar',['$scope','$interval','$log',func
     };
     // ### END DATEPICKER ###
 
-    var socket = io.connect('http://192.168.1.201:64500');
+    var socket = io.connect('http://101.101.101.101:80');
     socket.on('connect', function (data) {
         
         socket.emit('addRoom');
     });
     // when 'getservers' modify '$scope.serversNames'
     socket.on('getservers', function (data) {
-        //console.log("connect and :",data);
+        console.log("connect and :",data);
         if(typeof data === 'string'){
             alert(data);
         }else{ // is array
