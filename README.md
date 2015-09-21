@@ -17,7 +17,7 @@ The AngularJS monitor application include 2 URL:
 ### Prerequisites:
 	1. You have to be installed on your accommodation: 'git', 'nodejs', and a database 'mongodb'.
 
-	2.- For connect to the websocket you need to send a field OBLIGATORY with the name 'serverName'
+	2. For connect to the websocket you need to send a field OBLIGATORY with the name 'serverName'
 
 ### Run server
 0. download this projects from githup. You can use this command:
@@ -25,7 +25,9 @@ The AngularJS monitor application include 2 URL:
 
 1. later, open the "config.js" file and enter the appropriate parameters: you need to configure IP's both htpp server, such as the connection to the database MongoDB data; the "env" (environment) option accepts two values (string): 'development' or 'production'; the "adminRoom" field now don't has a very important use, simply put any name, but it has already implemented for future server upgrade.
 
-2. you have to install all of the packages dependencies nodejs server (found in the 'package.json' file) by entering the following command console:
+2. open the files "html/controller/00-chatNode.js" and "html/controller/01-filtrar.js" and enter the corresponding IP to connect to websocket.
+
+3. you have to install all of the packages dependencies nodejs server (found in the 'package.json' file) by entering the following command console:
 
 	npm install
 
@@ -38,6 +40,20 @@ The AngularJS monitor application include 2 URL:
 4. to start the server without dependence on the session, use the following command (in the debug.log you will have the business debugging code, and the errors.log you will have only the error for the aplication):
 
 	nohup node app.js 1> debug.log 2> errors.log
+
+### send information at server
+you can send information in 2 different ways:
+
+	1. you can connect to websocket by javascript plugin through socketIO
+	2. you can connect to websocket through PHP, with elephant.io module
+
+In both cases, once you are connected you should send the 'envioPHP' event with the variables to be monitored, and inside, to send a field OBLIGATORY with the name 'serverName'.
+
+### all events of the webscoket
+
+	1. addRoom
+	2. envioPHP
+	3. eixit
 
 ### auxiliar files
 
