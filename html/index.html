@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html data-ng-app="resumen">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="/favicon.ico">
+  <title>Monitorización de los servidores Texyon</title>
+  <meta name="description" content="Monitorización de los servidores Texyon">
+  <meta name="keywords" content="gráficas,servidor,Texyon">
+
+  <!-- RESET css -->
+  <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css"> 
+  <!-- BOOTSTRAP css -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css"> 
+  <!-- mi CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/micss.css">
+</head>
+
+<body>  
+	<div data-ui-view="viewPrincipal"></div>
+
+
+
+<!-- carga de JQUERY -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- carga de JQUERY-UI -->
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- carga de BOOTSTRAP 
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script> -->
+
+<!-- ### ANGULARJS ### 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>-->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+ <!-- this script load by order: jquery/jquery-ui/angularjs/angular-ui-sortable  
+<script type="text/javascript" src="http://cdn.jsdelivr.net/g/jquery@1,jquery.ui@1.10%28jquery.ui.core.min.js+jquery.ui.widget.min.js+jquery.ui.mouse.min.js+jquery.ui.sortable.min.js%29,angularjs@1.2,angular.ui-sortable"></script> -->
+
+<!-- ### CARGA DE MÓDULOS ### -->
+<!-- Angular ANIMATE 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-animate.min.js"></script> -->
+<!-- ANGULAR-RESOURCE para conexión con RESTfull 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-resource.min.js"></script> -->
+<!-- ANGULAR-UI-SORTABLE -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-sortable/0.13.4/sortable.min.js"></script>
+<!-- angular-ui-select (sanitaze y select) 
+<script type="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.js"></script>
+<script src="https://cdn.rawgit.com/angular-ui/ui-select/master/dist/select.min.js"></script>-->
+<!-- angular-route ANTIGUO 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script> -->
+
+<!-- módulo angular-ui-router para realizar enrutamientos -->
+<script type="text/javascript" src="/js/angular-ui-router.js"></script>
+<!-- módulo oclazyload para CARGA de conjtroller/scripts/ retardada -->
+<script type="text/javascript" src="/js/oclazyload.js"></script>
+
+<!-- ### CONFIGURACIÓN Y SERVICIOS ### -->
+<!-- archivo JS de configuración de la aplicación -->
+<script src="/js/appClient.js"></script>
+<!-- servicios de conexion RESTfull 
+<script src="/js/services.js"></script> -->
+</body>
+</html>

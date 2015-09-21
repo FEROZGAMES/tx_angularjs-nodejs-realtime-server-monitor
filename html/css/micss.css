@@ -1,0 +1,318 @@
+@charset "utf-8";
+
+.consoleChart{	
+    height:100%;
+    width: 50%;
+    border: 2px solid black;
+    border-style:groove;
+    overflow:scroll;
+    /*class="fRight over_hidden" style="width:50%;height:142px;"*/
+}
+.consoleAll{
+	float: left;
+	width: 50%;
+	height: 100%;
+	border: 2px solid black;
+    border-style:groove;
+    overflow:scroll;
+}
+
+.console{
+	float: right;
+	width: 50%;
+	height: 142px;
+	overflow: hidden;
+}
+
+hr{ margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.posAbsolute{position: absolute;}
+
+
+/* -- MIS ESTILOS --
+- WIREFRAME psd a 1440px 72px/p (MAC a 96 px/p); plantilla 15 columnas de 1200px; NEWSLETTER 600 px ancho max; MOVIL 4 barras
+- MÓVIL max 440 -min 320-; TABLET 441-1024; ESCRITORIO 1025 -max 1366- 
+- Ipad 1024*768; SAMSUNG S2 800*480 4,27p;
+- FONT-FAMILY con SERIFA Time, Georgia; sin SERIFA Helvetica, Arial 
+- TIPOGRAFÍA texto 14px titulares 22/24; texto 16px titulares 28/30px
+- TITULARES tamaño a 1,6 del cuerpo
+- INTERLINEADO títulos *1,1; texto *1,5; antes 50/60 ahora 70/75
+- COLOR en hexadecimal; TITULAR negro #000000 TEXTO #444444; utilizar OPACITY
+- BOTONES móvil min 48 x 48 px 
+- De PADRE a HIJO es más rápido la carga que buscar una clase en todo el dom */
+
+/* ### EJEMPLO DE SELECTORES CSS AVANZADOS ### 
+
+.caras li:first-child {float: left;}
+
+.bx-wrapper:nth-child(1) {margin: 0 auto 16px !important;}
+.bx-wrapper:nth-child(2) {margin: 0 auto 40px !important;}
+
+.overbg:hover{background-color:#f1f0f0;}
+*/
+
+/* ### MÁS RESETS ### */
+a {text-decoration:none;}
+
+/* ### CLASES COMPUESTAS ###*/
+
+/* ALINEAR TODO: */
+.center {
+	margin:0 auto;
+	max-width:1366px;
+	min-width:320px;
+	width:100%;}
+
+/* PARA ALINEAR VERTICALEMTE
+se necesitas 2 anclas, y a la superior hay que darle
+un height obligatoriamente */
+.padre {display:table !important;
+	text-align:center;}
+.hijo {display:table-cell;
+	vertical-align:middle;}
+
+/* IMAGENES RESPONSIVES */
+.imgResponsive {width:100%;height:auto;}
+
+/* OBLIGAR A MEDIR DESDE EL BORDE PARA ADENTRO
+el ancho y alto (y min/max) se mide:
+content-box: (por defecto) sólo contenido, sin border, padding, o margin.
+border-box: contenido, con padding y con border, pero no el margin */	
+.boxBox {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing: border-box; /* ¿Chrome? */}
+	
+/* igualar en vertical 2 contenedores */
+.boxDrch {
+	float:right;
+	width:48%;
+	margin-right: 1.33%;
+	padding-bottom: 32767px;
+	margin-bottom: -32767px;}
+.boxIzq {
+	float:left;
+	width:48%;
+	margin-left: 1.33%;
+	padding-bottom: 32767px;
+	margin-bottom: -32767px;}
+	
+/* hacer 3 columnas que sean responsives */	
+.columnas3responsives{
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+	-moz-column-count: 3; /* Firefox */
+    column-count: 3;}
+
+/* div toggle */
+.toggle01{
+	display:none;
+	position: relative;
+	top: -5px;
+	left: 50px;
+	background-color: #E0E0E0;
+	border:1px solid #f1f0f0;
+	border-radius:10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+	box-shadow:  6px -2px 4px #525151;}
+
+.miga {
+	font-size:12px;
+	margin:5px;
+	color:#333333;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	opacity: 0.7; filter: alpha(opacity=70); /* For IE8 and earlier */ -moz-opacity: 0.7;
+	margin-left: 10px;
+	padding-top: 2px;}	
+
+.miga a {color: #333333;}
+
+.firstLetter:first-letter {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size:200%;
+	color:#999;
+	font-style: italic;}	
+
+/* ### CLASES INDIVIDUALES ### */
+.ahover:hover {background-color:grey;}
+
+.bPng {background: url(images/controls.png) no-repeat 0 -32px;}
+.bGif {background: url(images/bx_loader.gif) center center no-repeat #fff;}
+
+.bRGBA5 {background: rgba(0,0,0,0.5)}
+.bC3 {background-color:#333333;}
+.bC8 {background-color:#888888;}
+.bC9 {background-color:#999999;}
+.bCc {background-color:#cccccc;}
+.bCw {background-color:white;}
+
+.bGradient{
+	background: linear-gradient(red, blue); /* Standard syntax */
+	background: -webkit-linear-gradient(red, blue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(red, blue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+/* lineal gradiante de arriba a abajo,
+http://www.w3schools.com/css/css3_gradients.asp
+ejemplos: otras direcciones, diagonales, con ángulos,
+múltiples colores, trasparencias, repeticiones, radiales,
+elipticos, diferentes tamaños, */}
+
+.bPosition16{background-position:-16px 50%;
+/* también se puede añadir parámetros como:
+left: auto; right: 35px; */}
+
+.borderLeft {border-left: 1px solid grey;}
+.borderRight {border-right: 1px solid grey;}
+
+.border2{border: 2px solid white;}
+.border5{border: 5px solid white;
+/* hay más tipos de bordes aparte del solid: http://www.w3schools.com/cssref/playit.asp?filename=playcss_border-style&preval=none */}
+
+.borderR8 {border-radius:8px; -moz-border-radius: 8px; -webkit-border-radius: 8px;}
+.borderR10 {border-radius:10px; -moz-border-radius: 10px; -webkit-border-radius: 10px;}
+.bRtl{border-top-left-radius: 10px; -moz-border-top-left-radius: 10px; -webkit-border-top-left-radius: 10px;}
+.bRadRightTB{border-top-right-radius: 10px; -moz-border-top-right-radius: 10px; -webkit-border-top-right-radius: 10px;
+			 border-bottom-right-radius: 10px; -moz-border-bottom-right-radius: 10px; -webkit-border-bottom-right-radius: 10px;}
+
+.boxShadow {
+	-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	-moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+	box-shadow: 0px 1px 5px 0px #4a4a4a;}
+
+.c333 {color:#333333;}
+.c666 {color:#666666;}
+.c999 {color:#999999;}
+.cWhite {color:white;}
+.cCCC {color:#cccccc;} 
+
+.clearBoth {clear:both;}
+
+.cursorPointer{cursor:pointer;
+/* http://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor */}
+
+.dNone {display:none;
+/* esta propiedad no ocupa lugar físico
+si quieres que ocupe lugar aunque no se vea utiliza visibility: visible; */}
+.dBlock {display:block;}
+
+.fLeft {float:left;}
+.fRight{float:right;}
+/* Para que los floats funcionen a la perfección hay que utilizar un
+overflow: hidden; en el DIV contenedor  */
+
+.fontSinSerifa {font-family:Helvetica, Arial, sans-serif;}
+.fontConSerifa {font-family:Georgia, "Times New Roman", Times, serif;}
+
+.fontS12 {font-size:12px;}
+.fontS14 {font-size:14px;}
+.fontS22 {font-size:22px;}
+
+.fontItalic {font-style:italic;}
+.fontObli{font-style:oblique;}
+.fontBold{font-weight: bold;}
+
+.h40 {height: 40px;}
+.h50 {height: 50px;}
+.h60 {height: 60px;}
+
+.lineHeight0 {line-height:0;}
+.lineHeight14 {line-height:14px;}
+.lineHeight20 {line-height: 20px;}
+.lineHeight50 {line-height:50px;}
+
+.m5 {margin:5px;}
+.m10 {margin:10px;}
+.m0auto {margin: 0 auto;}
+.mTop5 {margin-top:5px;}
+.mTop10 {margin-top:10px;}
+.mTop20 {margin-top:20px;}
+.mRight10 { margin-right:10px;}
+.mBotom5 {margin-bottom:5px;}
+.mBotom10 {margin-bottom:10px;}
+.mLeft5 {margin-left:5px;}
+.mLeft10 {margin-left:10px;}
+.m10tb {margin-top:10px;margin-bottom:10px;}
+.m5rl {margin-left:5px; margin-right:5px;}
+.m10rl {margin-left:10px; margin-right:10px;}
+
+.over_hidden {overflow:hidden;}
+/* PARA QUE LOS FLOAT FUNCIONE A LA PERFECCIÓN
+visible (default) es igual a initial: el texto sobre pasa la caja,
+hidden solo se ve el texto que cabe en la caja y desaparece lo demás,
+scroll y auto aparecen una barras deslizadores si hicieran falta */
+
+.opac0 {
+	opacity:0;
+	filter:alpha(opacity=0); /* For IE8 and earlier */
+	-moz-opacity: 0;}
+.opac4 {
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	-moz-opacity: 0.4;}
+
+.p5 {padding:5px;}
+.p10 {padding:10px;}
+.p5l {padding-left:5px;}
+.p5r {padding-right:5px;}
+.p10r {padding-right:10px;}
+.p10t {padding-top:10px;}
+.p10b {padding-bottom:10px;}
+.p5tb {padding-top:5px;padding-bottom:5px;}
+.p5rl {padding-right:5px;padding-left:5px;}
+.p10rl {padding-right:10px;padding-left:10px;}
+
+.tCenter {text-align:center;}
+.tJustify{text-align:justify;}
+.tRight {text-align:right;}
+.tLeft {text-align:left;}
+
+.textIndent10{text-indent:10px;
+/* el párrafo hace un tab,
+entra la primera letra los px que se marcan,
+he visto muchas veces puesto así "text-indent: -9999px;"*/}
+
+.tUpper{text-transform: uppercase;
+/* "uppercase" obligo el texto a mayúsculas,
+"lowercase" a minúsculas,
+"capitalize" la primera letra de cada palabra mayúsculas*/}
+
+.tUnder {text-decoration:underline;}
+
+.verticalCenter {vertical-align:middle;}
+
+.visiHidden{visibility: hidden;}
+/* hidden oculta el elemento pero el espacio físico se mantiene,
+con "visible" (default) se ve normal,
+para ocultar un elemento sin que ocupe espacio utilizar display:none;
+"collapse" es igual que display:none pero solo funciona en IE y Firefox */
+
+.w22 {width:22%;}
+.w25 {width:25%;}
+.w49 {width:49%;}
+.w50 {width:50%;}
+.w75 {width:75%;}
+.w80 {width:80%;}
+.w100 {width:100%;}
+.w80px {width:80px;}
+.w200px {width:200px;}
+
+.z2000 {z-index: 2000;}
+
+/* ### MEDIA QUERY ### */
+
+/* ESCRITORIO
+yo prefiero este punto de corte a 1024  */
+@media all and (min-width: 769px) {
+
+}
+
+/* TABLET */
+@media all and (max-width: 768px) and (min-width: 441px) {
+
+}
+
+/* MOVIL */
+@media all and (max-width: 440px) {
+
+}

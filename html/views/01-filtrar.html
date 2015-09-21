@@ -1,0 +1,116 @@
+<head>
+	<a href="http://192.168.1.201:64500/" target="_blanck"><img src="/img/sogiteck.png" alt="Logo Sogiteck" style="width: 100px;"></a>
+	<h2 class="h2Filtrar mLeft10" style="display: inline;">Filter data Servers</h2>
+	<label style="margin-left: 20px;">Current time: </label>
+	<input type="text" size="15" ng-model="hActual" class="mLeft10">
+</head>
+
+<div class="divFiltrar " style="width:100%;padding-left:10px;">
+	<hr>
+	<label>Select server: </label>
+	<select id="servidorHorasMenos"
+			ng-model="selectedServer"
+			ng-change="selectionServer(selectedServer)"
+			ng-options="item as item for item in allServer">
+	</select>
+
+
+	<label class="mLeft10">Last hours: </label>
+	<select id="" ng-model="hoursLess" ng-options="item for item in optionsHoursLess">
+	</select>
+
+	<button id="buttonHorasMenos" type="button" class="usuario btn btn-sm btn-success mLeft10" ng-click="getLastHours()">Get last data</button>
+	
+</div>
+
+<div  class="" style="width:100%;padding-left: 10px;padding-right: 10px;">
+	<hr>
+    <div class="row">
+        <div class="col-md-2">
+        	<h4>Date start:</h4>
+
+            <p class="input-group">
+              <input type="text" class="form-control"
+				ng-model="dt.start"
+				min-date="minDate"
+				max-date="maxDate"
+				datepicker-popup="{{format}}"
+				datepicker-options="dateOptions"
+				close-text="Close"
+				ng-required="true"
+				date-disabled="disabled(date, mode)"
+				is-open="statusStart.opened" 
+				/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open1($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+            <div style="margin-top:34px;">
+            	<button type="button" class="btn btn-sm btn-info" ng-click="todayDateStart()">Today</button>
+    			<button type="button" class="btn btn-sm btn-danger" ng-click="clearDateStart()">Clear</button>
+            </div>
+            
+        </div>
+
+        <div class="col-md-2" style="padding-top:5px;">
+			<!-- <label>Hour start:</label> -->
+			<timepicker ng-model="mytime.start" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+			<button type="button" class="btn btn-sm btn-info" ng-click="toggleMode()">12H / 24H</button>
+			<button type="button" class="btn btn-sm btn-danger" ng-click="clearHourStart()">Now</button>
+		</div>
+
+        <div class="col-md-2">
+			<h4>Date end:</h4>
+
+			<p class="input-group">
+				<input type="text" class="form-control"
+				ng-model="dt.end"
+				max-date="maxDate"
+				min-date="dt.start"
+				datepicker-popup="{{format}}"
+				datepicker-options="dateOptions"
+				close-text="Close"
+				ng-required="true"
+				date-disabled="disabled(date, mode)"
+				is-open="statusEnd.opened"
+				/>
+				
+				<span class="input-group-btn">
+					<button type="button" class="btn btn-default" ng-click="open2($event)"><i class="glyphicon glyphicon-calendar"></i>
+					</button>
+				</span>
+            </p>
+            <div style="margin-top:34px;">
+            	<button type="button" class="btn btn-sm btn-info" ng-click="todayDateEnd()">Today</button>
+            	<button type="button" class="btn btn-sm btn-danger" ng-click="clearDateEnd()">Clear</button>
+			</div>
+        </div>
+
+        <div class="col-md-2" style="padding-top:5px;">
+			<!-- <label>Hour start:</label> -->
+			<timepicker ng-model="mytime.end" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+			<button type="button" class="btn btn-sm btn-info" ng-click="toggleMode()">12H / 24H</button>
+			<button type="button" class="btn btn-sm btn-danger" ng-click="clearHourEnd()">Now</button>
+		</div>
+
+		<div class="col-md-2" style="padding-top: 16px;">
+			<h4>Select server: </h4>
+			<select id="servidorHorasMenos"
+					ng-model="selectedServer"
+					ng-change="selectionServer(selectedServer)"
+					ng-options="item as item for item in allServer">
+			</select>
+			<div class="mTop10">
+				<button id="buttonHorasMenos" type="button" class="usuario btn btn-sm btn-success" ng-click="getFilterData()">Get filter data</button>
+			</div>
+		</div>
+    </div>
+</div>
+<hr>
+
+<!-- DIV para la GRAFICA -->
+<div id="chartdiv" class="p10" style="width: 100%; height: 500px;"></div>
+
+<!-- DIV para ver los JSON -->
+<dv class="ajax p10">
+</dv>
